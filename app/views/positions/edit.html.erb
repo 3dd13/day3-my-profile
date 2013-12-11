@@ -1,0 +1,10 @@
+<h1>Edit Position</h1>
+
+<%= form_for @position do |f| %>
+
+  Title: <%= f.text_field :title %><br/>
+  Company: <%= f.text_field :company %><br/>
+  
+  <%= f.submit %>
+  
+<% end %>

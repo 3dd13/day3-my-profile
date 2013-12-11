@@ -1,0 +1,16 @@
+<%= link_to "New Position", new_position_path, class: "btn btn-primary" %>
+
+<div>
+<% @positions.each do |position| %>
+
+  <div><%= link_to position.title, position_path(position) %></div>
+  <div><%= position.company %></div>
+  <div><%= link_to "Edit", edit_position_path(position), class: "btn btn-default" %></div>
+  <div><%= link_to "Delete", position_path(position), method: :delete, class: "btn btn-danger" %></div>
+
+  <hr/>
+
+<% end %>
+</div>
+
+
